@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT License"
+
+[[mods]]
+modId="quantumsystem"
+displayName="Quantum System"
+version="${file.jarVersion}"
+credits="Caseofgames, for the development of this mod. Vazkii, for the AutoRegLib library."
+authors="Caseofgames"
+
+description='''
+You ever wanted to play with quantum mechanics? Now you can!
+'''
+
+[[dependencies.arl]]
+    modId="arl"
+    mandatory=true
+    versionRange="[25,)"
+    side="BOTH"
