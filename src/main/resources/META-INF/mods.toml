@@ -6,15 +6,9 @@ license="MIT License"
 modId="quantumsystem"
 displayName="Quantum System"
 version="${file.jarVersion}"
-credits="Caseofgames, for the development of this mod. Vazkii, for the AutoRegLib library."
+credits="Caseofgames, for the development of this mod. Darkhax, for a class I 'borrowed.'"
 authors="Caseofgames"
 
 description='''
 You ever wanted to play with quantum mechanics? Now you can!
 '''
-
-[[dependencies.arl]]
-    modId="arl"
-    mandatory=true
-    versionRange="[25,)"
-    side="BOTH"
