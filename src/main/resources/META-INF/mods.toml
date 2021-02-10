@@ -6,7 +6,7 @@ license="MIT License"
 modId="quantumsystem"
 displayName="Quantum System"
 version="${file.jarVersion}"
-credits="Caseofgames, for the development of this mod. Darkhax, for a class I 'borrowed.'"
+credits="Caseofgames, for the development of this mod. Darkhax, for a class I 'borrowed.' TheGreyGhost, for MinecraftByExample."
 authors="Caseofgames"
 
 description='''
