@@ -13,6 +13,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import caseofgames.quantumsystem.client.ProxyClient;
 import caseofgames.quantumsystem.common.ProxyCommon;
+import caseofgames.quantumsystem.common.QSBlocks;
+import caseofgames.quantumsystem.common.QSItems;
 import caseofgames.quantumsystem.util.ForgeLoggerTweaker;
 
 @Mod(QuantumSystem.MODID)
@@ -35,6 +37,9 @@ public class QuantumSystem
 		MOD_EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
 
 		MinecraftForge.EVENT_BUS.register(this);
+		
+		QSBlocks.init();
+		QSItems.init();
 		
 		registerCommonEvents();
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> registerClientOnlyEvents());
