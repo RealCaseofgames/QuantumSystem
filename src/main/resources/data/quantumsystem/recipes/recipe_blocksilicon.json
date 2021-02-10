@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "",
+    
+    "pattern":
+    [
+        "SSS",
+        "SSS",
+        "SSS"
+    ],
+    
+    "key":
+    {
+        "S":
+        {
+            "item": "quantumsystem:ingotsilicon"
+        }
+    },
+    
+    "result":
+    {
+        "item": "quantumsystem:blocksilicon"
+    }
+}
