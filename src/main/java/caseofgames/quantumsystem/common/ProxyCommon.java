@@ -1,5 +1,8 @@
 package caseofgames.quantumsystem.common;
 
+import static caseofgames.quantumsystem.common.QSBlocks.*;
+import static caseofgames.quantumsystem.common.QSItems.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -8,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import static caseofgames.quantumsystem.common.QSBlocks.*;
+import caseofgames.quantumsystem.block.IBlockItemProvider;
 
 @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class ProxyCommon
@@ -17,14 +20,31 @@ public class ProxyCommon
 	public static void onBlockRegistry(final RegistryEvent.Register<Block> event)
 	{
 		IForgeRegistry<Block> reg = event.getRegistry();
-		reg.register(blocksilicon);
+		
+		for (Block block : modBlocks)
+		{
+			reg.register(block);
+		}
 	}
 	
 	@SubscribeEvent
 	public static void onItemRegistration(final RegistryEvent.Register<Item> event)
 	{
+		// Register ItemBlocks first (Shut up! They're ItemBlocks, not BlockItems)
 		IForgeRegistry<Item> reg = event.getRegistry();
-		reg.register(blocksilicon.getBlockItem());
+		for (Block block : modBlocks)
+		{
+			if (block instanceof IBlockItemProvider)
+			{
+				reg.register(((IBlockItemProvider) block).getBlockItem());
+			}
+		}
+		
+		// Now register actual items
+		for (Item item : modItems)
+		{
+			reg.register(item);
+		}
 	}
 	
 	@SubscribeEvent
