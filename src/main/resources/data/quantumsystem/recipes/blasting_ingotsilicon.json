@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:blasting",
+    
+    "ingredient":
+    {
+        "item": "quantumsystem:blocksiliconore"
+    },
+    
+    "result": "quantumsystem:ingotsilicon",
+    "experience": 0.7,
+    "cookingtime": 80
+}
