@@ -1,4 +1,6 @@
 {
     "block.quantumsystem.blocksilicon": "Block of Silicon",
+    "block.quantumsystem.blocksiliconore": "Silicon Ore",
+    
     "item.quantumsystem.ingotsilicon": "Silicon Ingot"
 }
