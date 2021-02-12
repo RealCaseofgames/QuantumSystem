@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:smelting",
+    
+    "ingredient":
+    {
+        "item": "quantumsystem:blocksiliconore"
+    },
+    
+    "result": "quantumsystem:ingotsilicon",
+    "cookingtime": 40
+}
