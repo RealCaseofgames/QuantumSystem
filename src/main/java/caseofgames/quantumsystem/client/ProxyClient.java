@@ -15,5 +15,6 @@ public class ProxyClient
 	public static void onClientSetup(FMLClientSetupEvent event)
 	{
 		RenderTypeLookup.setRenderLayer(blocksilicon, RenderType.getSolid());
+		RenderTypeLookup.setRenderLayer(blocksiliconore, RenderType.getSolid());
 	}
 }
